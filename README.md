@@ -19,3 +19,12 @@ sudo docker build -t maven-web-app .
 sudo docker images
 sudo docker run -d --name myapp -p 6060:8080 maven-web-app
 http://YOUR-EC2-PUBLIC-IP:6060/YOUR-WAR-NAME
+
+if they ask normally
+git clone
+cd project
+ls
+nano dockerfile
+sudo docker build -t myapp .
+sudo docker images
+sudo docker run -d --name mycontainer -p 8080:80 myapp
