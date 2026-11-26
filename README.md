@@ -28,3 +28,24 @@ nano dockerfile
 sudo docker build -t myapp .
 sudo docker images
 sudo docker run -d --name mycontainer -p 8080:80 myapp
+
+to push to dockerhub
+login
+tag image- docker tag IMAGE_NAME YOUR_USERNAME/IMAGE_NAME:latest
+push-docker push YOUR_USERNAME/IMAGE_NAME:latest
+
+
+kubernetes commands
+minikube start --driver=docker
+minikube status
+kubectl get nodes
+kubectl create deployment mynginx --image=nginx
+kubectl get deployments
+kubectl get pods
+kubectl describe pods
+kubectl expose deployment mynginx --type=NodePort --port=80 --target-port=80
+kubectl get services
+kubectl scale deployment mynginx --replicas=4
+kubectl get pods
+kubectl get deployments
+kubectl port-forward svc/mynginx 8081:80
